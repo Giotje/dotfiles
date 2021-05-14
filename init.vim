@@ -73,6 +73,9 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 nnoremap <F1> :set invfullscreen<CR>
 vnoremap <F1> :set invfullscreen<CR>
 
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 let g:carbon_now_sh_options =
 \ { 'ln': 'true',
   \ 'fm': 'Fira Code' }
@@ -98,17 +101,36 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 filetype plugin on
 let g:NERDCreateDefaultMappings = 1
+let g:UltiSnipsExpandTrigger="<tab>"  " use <Tab> to trigger autocompletion
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" disable header folding
+let g:vim_markdown_folding_disabled = 1
 
+" do not use conceal feature, the implementation is not so good
+let g:vim_markdown_conceal = 0
 
+" disable math tex conceal feature
+let g:tex_conceal = ""
+let g:vim_markdown_math = 1
+
+" support front matter of various format
+let g:vim_markdown_frontmatter = 1  " for YAML format
+let g:vim_markdown_toml_frontmatter = 1  " for TOML format
+let g:vim_markdown_json_frontmatter = 1  " for JSON format
 call plug#begin()
 Plug 'preservim/nerdcommenter'
 Plug 'beanworks/vim-phpfmt'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'franbach/miramare'
 Plug 'tpope/vim-fugitive'
+Plug 'godlygeek/tabular'
+Plug 'elzr/vim-json'
+Plug 'plasticboy/vim-markdown'
 Plug 'itchyny/lightline.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'prettier/vim-prettier'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'frazrepo/vim-rainbow'
 Plug 'dense-analysis/ale'
 Plug 'vim-syntastic/syntastic'
@@ -117,14 +139,17 @@ Plug 'ajmwagar/vim-deus'
 Plug 'google/vim-maktaba'
 Plug 'tpope/vim-surround'
 Plug 'kien/ctrlp.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'pangloss/vim-javascript'
 Plug 'tmsvg/pear-tree'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'LeonardSSH/coc-discord-rpc'
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-colorscheme miramare
+colorscheme gruvbox
 
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
