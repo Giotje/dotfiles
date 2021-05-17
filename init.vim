@@ -101,7 +101,7 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 filetype plugin on
 let g:NERDCreateDefaultMappings = 1
-let g:UltiSnipsExpandTrigger="<tab>"  " use <Tab> to trigger autocompletion
+let g:UltiSnipsExpandTrigger="<c-tab>"  " use <Tab> to trigger autocompletion
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " disable header folding
@@ -120,6 +120,7 @@ let g:vim_markdown_toml_frontmatter = 1  " for TOML format
 let g:vim_markdown_json_frontmatter = 1  " for JSON format
 call plug#begin()
 Plug 'preservim/nerdcommenter'
+Plug 'chrisbra/Colorizer'
 Plug 'beanworks/vim-phpfmt'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'franbach/miramare'
@@ -129,6 +130,7 @@ Plug 'elzr/vim-json'
 Plug 'plasticboy/vim-markdown'
 Plug 'itchyny/lightline.vim'
 Plug 'altercation/vim-colors-solarized'
+Plug 'gko/vim-coloresque'
 Plug 'prettier/vim-prettier'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'frazrepo/vim-rainbow'
