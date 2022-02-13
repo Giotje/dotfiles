@@ -1,0 +1,45 @@
+{
+    "currentVersionInfo": {
+        "version": "2.4.5",
+        "hasShownChangelog": true
+    },
+    "settings": {
+        "saveOptions": {
+            "fileNameType": 3,
+            "customFileName": "${file}_${date}_${time}",
+            "randLength": 7,
+            "conflictingFilesHandle": 3,
+            "saveByName": true,
+            "appendCurrentName": false,
+            "lottieSize": 1,
+            "removeSpoilerTag": true
+        },
+        "misc": {
+            "contextMenuOnBottom": true
+        }
+    },
+    "folders": {
+        "data": [
+            {
+                "path": "/run/media/uwu/cum/discord_poep/images",
+                "name": "images"
+            },
+            {
+                "path": "/run/media/uwu/cum/discord_poep/gif",
+                "name": "gif"
+            },
+            {
+                "path": "/run/media/uwu/cum/discord_poep/emojis",
+                "name": "emojis"
+            },
+            {
+                "path": "/run/media/uwu/cum/discord_poep/avatar",
+                "name": "avatar"
+            },
+            {
+                "path": "/run/media/uwu/cum/discord_poep/vids",
+                "name": "vids"
+            }
+        ]
+    }
+}
